@@ -15,18 +15,18 @@ hr {
 
 .name {
     font-size: 40px;
-    margin-bottom: 30px;
 }
 
 .detail {
     font-size: 18px;
-    margin-bottom: 50px;
+    margin: 30px 0 50px 0;
 }
 
 .description {
     font-size: 20px;
     font-weight: 400;
     color: #00000080;
+    line-height: 30px;
 }
 
 .father {
@@ -48,5 +48,53 @@ hr {
     justify-content: center;
 }
 
+@media screen and (max-width: 391px){
+    .container {
+        max-width: 359px;
+        margin: 0 auto;
+    }
 
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    hr {
+        width: 220px;
+        margin: 30px auto;
+    }
+
+    .father {
+        width: 170px;
+        height: 208px;
+    }
+
+    .info {
+        display: flex;
+        align-items: start;
+    }
+
+    .text {
+        width: 180px;
+        height: 255px;
+    }
+
+    .second-sec {
+        margin: 30px 0 ;
+    }
+
+    .name {
+        font-size: 15px;
+    }
+
+    .detail {
+        font-size: 9px;
+        margin: 0;
+    }
+
+    .description {
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
 

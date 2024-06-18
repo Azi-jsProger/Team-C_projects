@@ -1,5 +1,5 @@
 import study from '../assets/img/icon_study.png'
-import experience from '../assets/img/icon_study.png'
+import experience from '../assets/img/25+.png'
 import wheel from '../assets/img/icon_wheel.png'
 import time from '../assets/img/icon_time.png'
 

@@ -21,3 +21,31 @@
 .title {
     font-size: 22px;
 }
+
+@media screen and (max-width: 391px){
+    .container {
+        max-width: 391px;
+    }
+
+    .card {
+        width: 73px;
+        height: 104px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #F0EAD2;
+    }
+
+    .card img {
+        width: 50px;
+        height: auto ;
+    }
+
+    .title {
+        font-size: 7px;
+    }
+
+}
