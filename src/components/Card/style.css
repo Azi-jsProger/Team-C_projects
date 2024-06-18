@@ -1,0 +1,51 @@
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E9E9E9;
+    box-shadow: 2px 3px 10px 2px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 206.9px;
+    height: 290px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 391px){
+    .container {
+        max-width: 391px;
+    }
+
+    .card {
+        width: 73px;
+        height: 104px;
+    }
+
+    .circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #F0EAD2;
+    }
+
+    .card img {
+        width: 50px;
+        height: auto ;
+    }
+
+    .title {
+        font-size: 7px;
+    }
+
+}
