@@ -1,0 +1,23 @@
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E9E9E9;
+    box-shadow: 2px 3px 10px 2px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 206.9px;
+    height: 290px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 22px;
+}

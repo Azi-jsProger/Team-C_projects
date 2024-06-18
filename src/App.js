@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {axiosInstance} from "./Utils/API/Api";
+import SecondSec from "./Sections/Second-Section/SecondSEC";
 
 const App = () => {
 
@@ -16,7 +17,7 @@ const App = () => {
     return (
         <div>
 
-
+            <SecondSec></SecondSec>
 
         </div>
     );

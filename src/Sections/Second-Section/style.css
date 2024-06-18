@@ -1,0 +1,52 @@
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.second-sec {
+    margin: 100px 0 ;
+}
+
+hr {
+    width: 800px;
+    border: 1px solid #111;
+    margin: 100px auto;
+}
+
+.name {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.detail {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00000080;
+}
+
+.father {
+    width: 340px;
+    height: 415px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    width: 800px;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
