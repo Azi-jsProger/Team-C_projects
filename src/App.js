@@ -1,12 +1,23 @@
-import React from 'react';
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import React, {useEffect} from 'react';
+import {axiosInstance} from "./Utils/API/Api";
 
 const App = () => {
+
+    const getNews = async () => {
+        const res = await axiosInstance.get('/news')
+        console.log(res)
+    }
+
+    useEffect(() => {
+        getNews()
+    }, []);
+
+
     return (
         <div>
-            <Header></Header>
-            <Footer></Footer>
+
+
+
         </div>
     );
 };
