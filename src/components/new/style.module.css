@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex p {
+    width: 740px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.img {
+    width: 400px;
+    height: 230px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
