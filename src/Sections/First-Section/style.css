@@ -1,0 +1,100 @@
+.app {
+    border-bottom: 1px solid #B7B7B7 ;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 22.5px 0;
+    position: relative;
+}
+
+.cot {
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.car-image {
+    width: 400px;
+    height: 738px;
+    background-color: #478E64;
+    position: absolute;
+    top: -209px;
+    right: -114.1px;
+    display: flex;
+    align-items: end;
+    z-index: -1;
+}
+
+.contac {
+    display: flex;
+    gap: 37px;
+}
+
+.gmail {
+    margin: 0 0 22.5px 50px;
+    display: flex;
+    gap: 12px;
+}
+
+.gmail a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+.car {
+    width: 75vh;
+    height: 40vh;
+    position: absolute;
+    right: 250px;
+    top: 200px;
+}
+
+.main h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 24px;
+}
+
+.study {
+    font-size: 15px;
+    line-height: 25px;
+    color: #3E3E3E;
+    margin-bottom: 10px;
+}
+
+.work {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+    align-items: center;
+}
+
+.work h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+.grafic p {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+.grafic {
+    display: flex;
+    align-items: center;
+}
+
+.zvon {
+    margin-bottom: 15px;
+}
