@@ -32,6 +32,7 @@ const App = () => {
         <div>
             <FirstSec></FirstSec>
             <SecondSec></SecondSec>
+
         </div>
     );
 };
