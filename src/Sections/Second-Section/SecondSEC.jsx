@@ -1,11 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
 
-const SecondSec = () => {
-    return (
-        <div>
-
-=======
 import Card from "../../components/Card/Card";
 import {ADVANTAGES_DATA} from "../../constants/adventage";
 import './style.css'
@@ -60,7 +53,6 @@ const SecondSec = () => {
                     </div>
                 </div>
             </div>
->>>>>>> ff32ae29fdbd206d5ed447badbb1a406cbc10623
         </div>
     );
 };

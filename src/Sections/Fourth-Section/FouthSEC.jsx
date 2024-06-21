@@ -1,13 +1,3 @@
-import React from 'react';
-<<<<<<< HEAD
-
-const FouthSec = () => {
-    return (
-        <div>
-
-        </div>
-    );
-=======
 import New from "../../components/new/New";
 import styles from './style.module.css'
 
@@ -39,7 +29,6 @@ const FouthSec = (props) => {
                 })}
             </div>
         </div>);
->>>>>>> ff32ae29fdbd206d5ed447badbb1a406cbc10623
 };
 
 export default FouthSec;
