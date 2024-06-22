@@ -1,28 +1,44 @@
-import React, {useEffect} from 'react';
+import {React,useState,useEffect} from 'react';
+import SecondSec from "./Sections/Second-Section/SecondSEC";
+import FourthSec from "./Sections/Fourth-Section/FouthSEC";
+import ButtonMaterial from "./components/Button/Button";
+import Loading from "./components/Loading/Loading";
+import Header from "./components/Header/Header";
+import FirstSec from "./Sections/First-Section/FirstSEC";
+import ThirdSec from './Sections/Third-Section/ThirdSEC'
 import {axiosInstance} from "./Utils/API/Api";
-import ThirdSec from './Sections/Third-Section/ThirdSEC';
+
 
 const App = () => {
+    const [news, setNews] = useState([]);
+    const [isLoading, setIsLoading] = useState(false)
 
     const getNews = async () => {
-        const res = await axiosInstance.get('/news')
-        console.log(res)
-    }
+        setIsLoading(true)
+       try {
+           const res = await axiosInstance.get('/news');
+           setNews(res.data);
+       } catch (e) {
+           console.log(e)
+       } finally {
+           setIsLoading(false)
+       }
+    };
 
     useEffect(() => {
-        getNews()
+        getNews();
     }, []);
-
 
     return (
         <div>
-
-     <ThirdSec />
+            <FirstSec />
+            <SecondSec />
+            <ThirdSec />
 
         </div>
     );
 };
 
 
-
 export default App;
+

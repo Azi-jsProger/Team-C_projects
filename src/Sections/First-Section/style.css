@@ -1,0 +1,171 @@
+.app {
+    border-bottom: 1px solid #B7B7B7;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 22.5px 0;
+    position: relative;
+}
+
+.cot {
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-image {
+    width: 50vh;
+    height: 745px;
+    background-color: #478E64;
+    position: absolute;
+    top: -44.6vh;
+    right: -2.2vh;
+    display: flex;
+    align-items: end;
+    z-index: 3;
+}
+
+.contac {
+    display: flex;
+    gap: 37px;
+}
+
+.gmail {
+    margin: 0 0 22.5px 50px;
+    display: flex;
+    gap: 12px;
+}
+
+.gmail a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    z-index: 4; /* Убедитесь, что ссылка находится поверх */
+}
+
+.car {
+    width: 75vh;
+    height: 40vh;
+    position: absolute;
+    right: 250px;
+    top: 200px;
+}
+
+.main h1 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 24px;
+}
+
+.study {
+    font-size: 15px;
+    line-height: 25px;
+    color: #3E3E3E;
+    margin-bottom: 10px;
+}
+
+.work {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+}
+
+.work h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+.grafic p {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+
+.grafic {
+    display: flex;
+    align-items: center;
+}
+
+.zvon {
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 391px) {
+    .container {
+        max-width: 359px;
+        margin: 0 auto;
+    }
+
+    .car {
+        display: none;
+    }
+
+    .app {
+        background-color: #488F65;
+    }
+
+    .main h1, .study, .zvon, .grafic p, .work h4 {
+        color: #fff;
+    }
+
+    .main h1 {
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 5px;
+    }
+
+    .study {
+        margin-bottom: 5px;
+    }
+
+    .zvon {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 20.5px;
+    }
+
+    .grafic p, .work h4, .gmail a {
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    .work {
+        gap: 10px;
+    }
+
+    .cot {
+        height: 50vh;
+    }
+
+    .first {
+        margin-bottom: 15px;
+    }
+
+    .car-image {
+        width: 0px;
+        background-color: transparent;
+        height: 100px;
+        top: 200px;
+        right: 185px;
+        z-index: 1;
+    }
+
+    .gmail {
+        display: flex;
+        align-items: center;
+        gap: 6.25px;
+    }
+
+    .mail-img {
+        height: 10px;
+        width: auto;
+    }
+
+}
+
