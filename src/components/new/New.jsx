@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.module.css';
+import {motion} from "framer-motion";
 
 const New = (props) => {
     const {
@@ -9,9 +10,17 @@ const New = (props) => {
 
     return (
         <div className={styles.flex}>
-            <p>{text}</p>
+            <motion.p
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+            >{text}</motion.p>
             <div className={styles.img}>
-                <img src={image} alt="" />
+                <motion.img
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    src={image} />
             </div>
         </div>
     );

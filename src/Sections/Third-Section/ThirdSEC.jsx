@@ -5,8 +5,18 @@ import location from '../../assets/img/location_on_24dp_FILL0_wght400_GRAD0_opsz
 import { axiosInstance } from "../../Utils/API/Api";
 import ButtonMaterial from "../../components/Button/Button";
 import { useForm } from "react-hook-form";
+import {showError, showSucsess} from "../../Utils/alert/alert";
+import Loading from "../../components/Loading/Loading";
+import {motion} from "framer-motion";
 
-const ThirdSEC = () => {
+const ThirdSEC = (props) => {
+
+    const {
+        isLoading,
+        setIsLoading
+    }  = props
+
+
     const {
         register,
         handleSubmit,
@@ -14,13 +24,27 @@ const ThirdSEC = () => {
     } = useForm({ mode: 'onChange' });
 
     const onSubmit = async (data) => {
+        setIsLoading(true)
         try {
             const response = await axiosInstance.post('/send-message', {
                 message: data.phone
             });
             console.log(response.data);
-        } catch (error) {
-            console.error("There was an error!", error);
+            showSucsess('Успешно','успешно')
+        } catch (e) {
+            if (e?.res?.status === 404) {
+                showError('Связь с сервером установлена, но данных по заданному запросу на сервере нет')
+            } else if (e?.response?.status === 403) {
+                showError('Нет прав на просмотр')
+            } else if (e?.response?.status === 401) {
+                showError('Вы не авторизованы')
+            } else if (e?.response?.status === 400) {
+                showError('Неправильный запрос')
+            } else {
+                showError('server is temporarily unavailable')
+            }
+        } finally {
+            setIsLoading(false)
         }
     };
 
@@ -48,8 +72,12 @@ const ThirdSEC = () => {
     return (
         <div className='third'>
             <div className='box'>
-                <img src={book} className='book' alt="Book" />
-                <div className="text">
+                <motion.img
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    src={book} className='book' alt="Book" />
+                <div className="text-in">
                     <div className="instruct">
                         <h2>Методическое пособие:</h2>
                         <p>Методическое пособие по правилам дорожного движения<br/>
@@ -68,29 +96,35 @@ const ThirdSEC = () => {
                             <a href="">Сухе Ботора 26/1</a>
                         </div>
 
-
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <div className="phone">
-                                <input
-                                    {...register('phone', {
-                                        maxLength: {
-                                            value: 15,
-                                            message: 'Максимум 15 символов'
-                                        }
-                                    })}
-                                    placeholder='Пишите номер'
-                                    type="text"
-                                    className='inForm'
-                                />
-                                {errors?.phone && (<div className='errors'>{errors.phone.message}</div>)}
+                        {isLoading ?
+                            <div className='loa-third'>
+                                <Loading />
                             </div>
-                            <ButtonMaterial
-                                onSubmit={onSubmit}
-                                styles={styleForm}
-                                hoverStyles={hoverForm}
-                                value='купить'
-                            />
-                        </form>
+
+                            :
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <div className="phone">
+                                    <input
+                                        {...register('phone', {
+                                            maxLength: {
+                                                value: 15,
+                                                message: 'Максимум 15 символов'
+                                            }
+                                        })}
+                                        placeholder='Пишите номер'
+                                        type="text"
+                                        className='inForm'
+                                    />
+                                    {errors?.phone && (<div className='errors'>{errors.phone.message}</div>)}
+                                </div>
+                                <ButtonMaterial
+                                    onSubmit={onSubmit}
+                                    styles={styleForm}
+                                    hoverStyles={hoverForm}
+                                    value='купить'
+                                />
+                            </form>
+                        }
                     </div>
                 </div>
             </div>
