@@ -1,0 +1,148 @@
+.instruct h2{
+     margin-bottom: 20px;
+     text-align: center;
+     font-size: 30px;
+     font-weight: 500;
+}
+
+.instruct p {
+     font-size: 22px;
+     font-weight: 500;
+}
+
+.instruct {
+     margin: 0 auto;
+}
+
+.third {
+     width: 100%;
+     height: 120vh;
+     background-color: rgba(71, 142, 100, 1);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+
+.box {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     border-radius: 50px;
+     background-color: #fff;
+     width: 80%;
+     height: 100vh;
+}
+.text {
+     display: flex;
+     height: 100vh;
+     flex-direction: column;
+     justify-content: space-around;
+}
+
+.codify {
+     margin-top: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-right: 50px;
+}
+
+form {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+
+.inForm {
+     height: 50px;
+     background: transparent;
+     border: none;
+     border-bottom: 1px solid #111111;
+     padding: 10px;
+}
+
+.loc {
+     display: flex;
+     gap: 5px;
+}
+
+.book {
+     width: 40%;
+     height: 85%;
+}
+
+.tag {
+     width: auto;
+     height: 20px;
+}
+
+.loc a {
+     color: #111;
+     font-weight: 600;
+}
+
+.tel{
+     margin-left: 10px;
+     border-radius: 50px;
+     width: 130px;
+}
+
+.errors {
+     color: red;
+}
+
+@media screen and (max-width: 391px){
+     .container {
+          max-width: 359px;
+          margin: 0 auto;
+     }
+
+     .box {
+          background-color: #CCD5AE;
+     }
+
+     .book {
+          width: 130px;
+          height: 170px;
+     }
+
+     .third {
+          width: 100%;
+          height: 287px;
+     }
+
+     .box {
+          width: 358px;
+          height: 227px;
+     }
+
+     .instruct h2 {
+          font-size: 10px;
+          font-weight: 400;
+          margin-bottom: 5px;
+     }
+
+     .instruct p {
+          font-size: 8px;
+          font-weight: 500;
+     }
+
+     .inForm {
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          width: 70px;
+          height: 20px;
+          font-size: 9px;
+     }
+
+     .errors {
+          font-size: 8px;
+     }
+
+     .loc {
+          display: none;
+     }
+
+
+}

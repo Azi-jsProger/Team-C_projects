@@ -1,4 +1,3 @@
-import React from 'react';
 import './style.css';
 import father from '../../assets/img/father.png';
 import {motion} from "framer-motion";
@@ -47,8 +46,10 @@ const SecondSec = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
+
 
 export default SecondSec;
