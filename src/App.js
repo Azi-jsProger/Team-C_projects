@@ -16,8 +16,8 @@ const App = () => {
     const getNews = async () => {
         setIsLoading(true)
        try {
-           const res = await axiosInstance.get('/news');
-           setNews(res.data);
+           const res = await axiosInstance.get('/send-news');
+           setNews(res);
        } catch (e) {
            console.log(e)
        } finally {
