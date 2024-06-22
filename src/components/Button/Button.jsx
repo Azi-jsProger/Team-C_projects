@@ -7,7 +7,8 @@ const ButtonMaterial = (props) => {
         styles,
         value,
         img,
-        hoverStyles
+        hoverStyles,
+        onSubmit
     } = props
 
     const buttonStyles = {
