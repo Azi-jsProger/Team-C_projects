@@ -33,7 +33,7 @@ const SecondSec = () => {
                         className='father'
                         src={father}
                     />
-                    <div className="text">
+                    <div className="text-des">
                         <h1 className='name'>Руслан Жакшылыкович</h1>
                         <h4 className='detail'>Инструктор по вождению более 25 лет.</h4>
                         <p className='description'>

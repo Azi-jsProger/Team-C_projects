@@ -33,7 +33,7 @@
      width: 80%;
      height: 100vh;
 }
-.text {
+.text-in {
      display: flex;
      height: 100vh;
      flex-direction: column;
@@ -92,6 +92,13 @@ form {
      color: red;
 }
 
+.loa-third {
+     display: flex;
+     /*align-items: center;*/
+     justify-content: center;
+     width: 50%;
+}
+
 @media screen and (max-width: 391px){
      .container {
           max-width: 359px;
@@ -133,7 +140,7 @@ form {
           color: #fff;
           width: 70px;
           height: 20px;
-          font-size: 9px;
+          font-size: 8px;
      }
 
      .errors {
@@ -144,5 +151,11 @@ form {
           display: none;
      }
 
+     .text-in {
+          height: 30vh;
+     }
+
 
 }
+
+

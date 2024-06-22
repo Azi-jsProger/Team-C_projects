@@ -40,7 +40,7 @@ hr {
     justify-content: space-between;
 }
 
-.text {
+.text-des {
     width: 800px;
     height: 312px;
     display: flex;
@@ -74,7 +74,7 @@ hr {
         align-items: start;
     }
 
-    .text {
+    .text-des {
         width: 180px;
         height: 255px;
     }
