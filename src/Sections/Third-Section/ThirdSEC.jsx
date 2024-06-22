@@ -17,8 +17,8 @@ const ThirdSEC = () => {
                         <span>Жакшылыковичу по телефону или WhatsApp</span> <br /> <br />Вы можете приобрести данное пособие по адресу либо <br /> по звонку:</p>
                         <div className='codify'>
                         <img src={location} className='tag'/>
-                            <a className='tag' href="https://go.2gis.com/3mih2">Сухе Ботора 26/1</a>
-                            <input type="tel" maxLength={16} className='tel'/>
+                            <a className='tag' href="">Сухе Ботора 26/1</a>
+                            <input type="tel"  className='tel'/>
                             <button>КУПИТЬ</button>
                         </div>
                 </div>
