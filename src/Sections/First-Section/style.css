@@ -1,5 +1,5 @@
 .app {
-    border-bottom: 1px solid #B7B7B7 ;
+    border-bottom: 1px solid #B7B7B7;
 }
 
 .first {
@@ -16,8 +16,6 @@
     justify-content: space-between;
 }
 
-
-
 .car-image {
     width: 400px;
     height: 745px;
@@ -27,7 +25,7 @@
     right: -15.32vh;
     display: flex;
     align-items: end;
-    z-index: -1;
+    z-index: 3;
 }
 
 .contac {
@@ -46,8 +44,8 @@
     color: #fff;
     font-size: 15px;
     font-weight: 400;
+    z-index: 4; /* Убедитесь, что ссылка находится поверх */
 }
-
 
 .car {
     width: 75vh;
@@ -75,7 +73,6 @@
     display: flex;
     gap: 19px;
     align-items: center;
-    align-items: center;
 }
 
 .work h4 {
@@ -98,3 +95,77 @@
 .zvon {
     margin-bottom: 15px;
 }
+
+@media screen and (max-width: 391px) {
+    .container {
+        max-width: 359px;
+        margin: 0 auto;
+    }
+
+    .car {
+        display: none;
+    }
+
+    .app {
+        background-color: #488F65;
+    }
+
+    .main h1, .study, .zvon, .grafic p, .work h4 {
+        color: #fff;
+    }
+
+    .main h1 {
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 5px;
+    }
+
+    .study {
+        margin-bottom: 5px;
+    }
+
+    .zvon {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 20.5px;
+    }
+
+    .grafic p, .work h4, .gmail a {
+        font-size: 8px;
+        font-weight: 400;
+    }
+
+    .work {
+        gap: 10px;
+    }
+
+    .cot {
+        height: 50vh;
+    }
+
+    .first {
+        margin-bottom: 15px;
+    }
+
+    .car-image {
+        width: 0px;
+        background-color: transparent;
+        height: 100px;
+        top: 200px;
+        right: 185px;
+        z-index: 1;
+    }
+
+    .gmail {
+        display: flex;
+        align-items: center;
+        gap: 6.25px;
+    }
+
+    .mail-img {
+        height: 10px;
+        width: auto;
+    }
+
+}
+
