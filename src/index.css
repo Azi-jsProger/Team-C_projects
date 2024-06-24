@@ -26,3 +26,10 @@ code {
   width: 1320px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 391px){
+  .container {
+    max-width: 359px;
+    margin: 0 auto;
+  }
+}

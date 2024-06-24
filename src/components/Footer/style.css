@@ -1,0 +1,71 @@
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+}
+
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.foot h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+.tel-phone a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.a-inst {
+    display: flex;
+    gap: 22px;
+}
+
+.tel-phone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nom {
+    display: flex;
+    align-items: center;
+    gap: 6.87px;
+}
+
+.nom {
+    height: 11px;
+    width: auto;
+}
+
+@media screen and (max-width: 391px){
+    footer {
+        height: 76px;
+    }
+
+    .a-inst a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .a-inst {
+        gap: 12px;
+    }
+
+    .foot h1 {
+        font-size: 15px;
+    }
+
+    .num-2 {
+        display: none;
+    }
+}

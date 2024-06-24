@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ThirdSEC.css';
 import book from '../../assets/img/image.png';
 import location from '../../assets/img/location_on_24dp_FILL0_wght400_GRAD0_opsz24.png';
@@ -11,11 +11,10 @@ import {motion} from "framer-motion";
 
 const ThirdSEC = (props) => {
 
-    const {
-        isLoading,
-        setIsLoading
-    }  = props
-
+    // const {
+    //     isLoading,
+    //     setIsLoading
+    // }  = props
 
     const {
         register,
@@ -24,7 +23,7 @@ const ThirdSEC = (props) => {
     } = useForm({ mode: 'onChange' });
 
     const onSubmit = async (data) => {
-        setIsLoading(true)
+        props.setIsLoading(true)
         try {
             const response = await axiosInstance.post('/send-message', {
                 message: data.phone
@@ -44,7 +43,7 @@ const ThirdSEC = (props) => {
                 showError('server is temporarily unavailable')
             }
         } finally {
-            setIsLoading(false)
+            props.setIsLoading(false)
         }
     };
 
@@ -96,7 +95,7 @@ const ThirdSEC = (props) => {
                             <a href="">Сухе Ботора 26/1</a>
                         </div>
 
-                        {isLoading ?
+                        {props.isLoading ?
                             <div className='loa-third'>
                                 <Loading />
                             </div>

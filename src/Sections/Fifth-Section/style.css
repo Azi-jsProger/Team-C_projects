@@ -1,0 +1,161 @@
+.fif {
+    background-color: #478E64;
+}
+
+.text-fif {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    padding-top: 100px;
+    margin-left: 7%;
+}
+
+.text-fif p {
+    margin-top: 20px;
+}
+
+.f-text {
+    text-align: center;
+    color: #fff;
+    margin-left: 18%;
+}
+
+.cards {
+    display: flex;
+    background-color: #0000001A;
+    width: 100%;
+    height: 348px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+    margin-bottom: 100px;
+}
+
+.cards-text h3 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.h3-cards1 {
+    margin-bottom: 20px;
+}
+
+.cards img {
+    width: auto;
+    height: 173px;
+}
+
+.CardLink a img {
+    width: 24px;
+    height: 24px;
+}
+
+.CardLink a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.cards-text p {
+    width: 840px;
+    color: #fff;
+}
+
+.bot-what {
+    margin-bottom: 20px;
+}
+
+.div-cards {
+    width: 100%;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.but-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.h3-cards {
+    margin-bottom: 53px;
+}
+
+.bot-but {
+    margin-bottom: 58px;
+}
+
+@media screen and (max-width: 391px){
+    .cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 30px ;
+        padding-top: 7%;
+    }
+
+    .cards img {
+        width: auto;
+        height: 85px;
+    }
+
+    .text-fif {
+        position: relative;
+        margin-bottom: 10%;
+    }
+
+    .trafic img {
+        width:auto ;
+        height: 91px;
+        position: absolute;
+        top: 47%;
+    }
+
+    .f-text {
+        position: absolute;
+        top: 35%;
+        left: -25%;
+    }
+
+    .f-text h1 {
+        font-size: 21px;
+        font-weight: 700;
+    }
+
+    .f-text p {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 2%;
+        margin-left: 0;
+    }
+
+    .cards-text h3, .cards-text p, .CardLink p , .CardLink a {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .cards-text h3 {
+        margin-bottom: 9%;
+    }
+
+    .cards-text p {
+        width: 322px;
+        margin-bottom: 7%;
+    }
+
+    .CardLink p{
+        margin:0;
+    }
+
+    .cards-2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+}

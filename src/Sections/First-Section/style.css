@@ -97,11 +97,6 @@
 }
 
 @media screen and (max-width: 391px) {
-    .container {
-        max-width: 359px;
-        margin: 0 auto;
-    }
-
     .car {
         display: none;
     }
@@ -130,6 +125,11 @@
         margin-bottom: 20.5px;
     }
 
+    .grafic img {
+        width: 15%;
+        height: 15%;
+    }
+
     .grafic p, .work h4, .gmail a {
         font-size: 8px;
         font-weight: 400;
@@ -150,8 +150,8 @@
     .car-image {
         width: 0px;
         background-color: transparent;
-        height: 100px;
-        top: 200px;
+        height: 10%;
+        top: 97%;
         right: 185px;
         z-index: 1;
     }
