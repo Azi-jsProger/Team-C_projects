@@ -7,6 +7,7 @@ import {axiosInstance} from "./Utils/API/Api";
 import {ToastContainer} from "react-toastify";
 import {showError, showSucsess} from "./Utils/alert/alert";
 import 'react-toastify/dist/ReactToastify.css';
+import FifthSec from "./Sections/Fifth-Section/FifthSEC";
 
 
 const App = () => {
@@ -52,6 +53,9 @@ const App = () => {
                 news={news}
                 isLoading={isLoading}
             />
+
+            <FifthSec />
+
             <ToastContainer
                 position="top-right"
                 autoClose={1500}
@@ -70,4 +74,3 @@ const App = () => {
 
 
 export default App;
-
