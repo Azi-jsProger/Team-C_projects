@@ -6,6 +6,7 @@ import './style.css'
 import ButtonMaterial from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import hand from '../../assets/img/Group 34.png'
+import {showSucsess} from "../../Utils/alert/alert";
 
 const FifthSec = () => {
 
@@ -21,6 +22,10 @@ const FifthSec = () => {
 
     const hoverCard = {
         backgroundColor: 'grey',
+    }
+
+    const alert = async () => {
+      await showSucsess('На разработке','извините ')
     }
 
     return (
@@ -68,6 +73,7 @@ const FifthSec = () => {
                         <p className='bot-but'>Проверьте свои знания ПДД вместе с нами. Вам дается 25 минут чтобы ответить на 20 вопросов с иллюстрациями и вариантами ответов, узнайте уровень ваших знаний ПДД</p>
                         <div className='but-cards'>
                             <ButtonMaterial
+                                onSubmit={alert}
                                 value='Пройти Тест!'
                                 styles={stylesCard}
                                 hoverStyles={hoverCard}

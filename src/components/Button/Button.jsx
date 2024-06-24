@@ -19,7 +19,7 @@ const ButtonMaterial = (props) => {
     };
 
     return (
-        <Button sx={buttonStyles} variant="contained" >
+        <Button sx={buttonStyles} variant="contained" onClick={onSubmit} >
             <img src={img} alt=""/>
             {value}
         </Button>
