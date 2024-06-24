@@ -23,6 +23,20 @@
     margin-top: 100px;
 }
 
+.error {
+    font-size: 35px;
+    color: #ce0303;
+    font-weight: 800;
+}
+
+.error_div {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 @media screen and (max-width: 391px){
     .container {
         max-width: 359px;
@@ -40,6 +54,12 @@
         margin-bottom: 20px;
     }
 
+    .error_div {
+        height: 50vh;
+    }
 
+    .error {
+        font-size: 17px;
+    }
 
 }

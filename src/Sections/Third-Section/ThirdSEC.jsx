@@ -25,7 +25,7 @@ const ThirdSEC = (props) => {
     const onSubmit = async (data) => {
         props.setIsLoading(true)
         try {
-            const response = await axiosInstance.post('/send-message', {
+            const response = await axiosInstance.post('/send-messag', {
                 message: data.phone
             });
             console.log(response.data);
@@ -92,7 +92,7 @@ const ThirdSEC = (props) => {
 
                         <div className="loc">
                             <img src={location} className='tag' alt="Location"/>
-                            <a href="">Сухе Ботора 26/1</a>
+                            <a href="https://maps.app.goo.gl/1NBQfEnbYmDCu71c7" target='_blank'>Сухе Ботора 26/1</a>
                         </div>
 
                         {props.isLoading ?
@@ -106,8 +106,8 @@ const ThirdSEC = (props) => {
                                     <input
                                         {...register('phone', {
                                             maxLength: {
-                                                value: 15,
-                                                message: 'Максимум 15 символов'
+                                                value: 17,
+                                                message: 'Максимум 17 символов'
                                             }
                                         })}
                                         placeholder='Пишите номер'
