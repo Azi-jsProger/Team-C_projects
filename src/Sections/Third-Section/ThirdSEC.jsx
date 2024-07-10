@@ -11,10 +11,14 @@ import {motion} from "framer-motion";
 
 const ThirdSEC = (props) => {
 
-    // const {
-    //     isLoading,
-    //     setIsLoading
-    // }  = props
+    const {
+        isLoading,
+        setIsLoading,
+        id
+    }  = props
+
+
+    const [clear, setClear] = useState('')
 
     const {
         register,
@@ -25,7 +29,7 @@ const ThirdSEC = (props) => {
     const onSubmit = async (data) => {
         props.setIsLoading(true)
         try {
-            const response = await axiosInstance.post('/send-messag', {
+            const response = await axiosInstance.post('/send-message', {
                 message: data.phone
             });
             console.log(response.data);
@@ -41,15 +45,16 @@ const ThirdSEC = (props) => {
                 showError('Неправильный запрос')
             } else {
                 showError('server is temporarily unavailable')
+                setClear('')
             }
         } finally {
             props.setIsLoading(false)
+
         }
     };
 
-
     const hoverForm = {
-        backgroundColor: 'grey',
+        backgroundColor: '#109d02',
     }
 
     const styleForm = {
@@ -69,7 +74,10 @@ const ThirdSEC = (props) => {
     }
 
     return (
-        <div className='third'>
+
+            <section className="third" id={id}>
+
+
             <div className='box'>
                 <motion.img
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -113,6 +121,8 @@ const ThirdSEC = (props) => {
                                         placeholder='Пишите номер'
                                         type="text"
                                         className='inForm'
+                                        onChange={(e) => setClear(e.target.value)}
+                                        value={clear}
                                     />
                                     {errors?.phone && (<div className='errors'>{errors.phone.message}</div>)}
                                 </div>
@@ -127,7 +137,8 @@ const ThirdSEC = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+            </section>
+
     );
 };
 

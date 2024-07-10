@@ -2,13 +2,13 @@ import React from 'react';
 import Button from '@mui/material/Button';
 
 const ButtonMaterial = (props) => {
-
     const {
         styles,
         value,
         img,
         hoverStyles,
-        onSubmit
+        onSubmit,
+        disabled
     } = props
 
     const buttonStyles = {
@@ -19,11 +19,11 @@ const ButtonMaterial = (props) => {
     };
 
     return (
-        <Button sx={buttonStyles} variant="contained" onClick={onSubmit} >
-            <img src={img} alt=""/>
+        <Button sx={buttonStyles} variant="contained" onClick={onSubmit} disabled={disabled}>
+            {img && <img src={img} alt="" />}
             {value}
         </Button>
     );
 };
 
-export default ButtonMaterial ;
+export default ButtonMaterial;

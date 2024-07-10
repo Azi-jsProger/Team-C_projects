@@ -4,9 +4,15 @@ import {motion} from "framer-motion";
 import {ADVANTAGES_DATA} from "../../constants/adventage";
 import Card from "../../components/Card/Card";
 
-const SecondSec = () => {
+const SecondSec = (props) => {
+
+    const {
+       id
+    } = props
+
     return (
-        <div className='second-sec'>
+        <section className='second-sec' id={id}>
+
             <div className="container">
                 <div className='flex'>
                     {ADVANTAGES_DATA.map((item, idx) => {
@@ -47,7 +53,8 @@ const SecondSec = () => {
                 </div>
             </div>
 
-        </div>
+        </section>
+
     );
 };
 

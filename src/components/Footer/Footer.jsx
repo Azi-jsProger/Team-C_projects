@@ -5,7 +5,12 @@ import whats from '../../assets/img/whatsapp.png'
 import telegramm from '../../assets/img/Telegram.png'
 import tel from '../../assets/img/PhoneWhite.png'
 
-const Footer = () => {
+const Footer = (props) => {
+
+        const {
+            headID
+        } = props
+
     return (
 
 
@@ -27,7 +32,7 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    <h1>Жакшы жол</h1>
+                    <a href={headID}>Жакшы жол</a>
 
                     <div className="tel-phone">
 

@@ -7,11 +7,12 @@ const FourthSec = (props) => {
     const {
         news,
         isLoading,
-        error
+        error,
+        id
     } = props;
 
     return (
-        <div className={styles.fSection}>
+        <section className={styles.fSection} id={id}>
             {error ? (
                 <div className={styles.error_div}><h1 className={styles.error}>{error}</h1></div>
             ) : (
@@ -37,7 +38,7 @@ const FourthSec = (props) => {
                     )}
                 </div>
             )}
-        </div>
+        </section>
     );
 };
 

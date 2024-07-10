@@ -41,7 +41,7 @@ hr {
 }
 
 .text-des {
-    width: 800px;
+    width: 60vw;
     height: 312px;
     display: flex;
     flex-direction: column;

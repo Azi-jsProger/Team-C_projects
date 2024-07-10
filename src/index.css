@@ -14,12 +14,30 @@ code {
     monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-weight: 500;
   font-family: 'Inter';
+}
+
+*::selection {
+  background-color: transparent;
+}
+
+h1 , p {
+  transition: 1s ease-in-out;
+}
+
+h1::selection , p::selection , a::selection , img::selection, h3::selection, h4::selection, h2::selection,span::selection{
+  color: #7DA658;
+  background-color: transparent;
 }
 
 .container {
