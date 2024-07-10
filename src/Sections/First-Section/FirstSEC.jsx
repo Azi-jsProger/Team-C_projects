@@ -9,12 +9,18 @@ import time from '../../assets/img/Time.png';
 import mail from '../../assets/img/Mail.png';
 import { motion } from "framer-motion";
 
-const FirstSec = () => {
+const FirstSec = (props) => {
+
+    const {
+        headID
+    } = props
+
     const styles = {
         width: '164px',
         height: '44px',
         borderRadius: '100px',
         backgroundColor: '#7DA658',
+        color: '#fff',
         gap: '10px',
         fontSize: '14px',
         textTransform:'capitalize',
@@ -34,7 +40,7 @@ const FirstSec = () => {
         gap: '10px',
         color: 'black',
         fontWeight: '500',
-        fontSize: '14px',
+        fontSize: '12.5px',
         '@media screen and (max-width: 391px)': {
             color: '#fff',
             borderBottom: '1px solid #fff'
@@ -42,7 +48,7 @@ const FirstSec = () => {
     }
 
     const hoverWhatsapp = {
-        backgroundColor: '#6B9548', // Измените на желаемый цвет при наведении
+        backgroundColor: '#6B9548',
     };
 
     const hoverPhone = {
@@ -51,7 +57,9 @@ const FirstSec = () => {
 
     return (
         <div className='app'>
-            <Header />
+            <Header
+                id={headID}
+            />
             <div className="container">
                 <div className="first">
                     <div className='cot'>
@@ -63,12 +71,20 @@ const FirstSec = () => {
                             <p className='zvon'>Получите полную консультацию по звонку!</p>
                             <div className='contac'>
                                 <a href="https://web.whatsapp.com/0552 209 809" target='_blank' rel="noopener noreferrer">
+                                    {/*<ButtonMaterial*/}
+                                    {/*    img={whatsapp}*/}
+                                    {/*    value={'WhatsApp'}*/}
+                                    {/*    styles={styles}*/}
+                                    {/*    hoverStyles={hoverWhatsapp}*/}
+                                    {/*/>*/}
                                     <ButtonMaterial
                                         img={whatsapp}
                                         value={'WhatsApp'}
                                         styles={styles}
-                                        hoverStyles={hoverWhatsapp}
+                                        hoverStyles={{ backgroundColor: '#6B9548' }} // пример hover стилей
                                     />
+
+
                                 </a>
 
                                 <a href="tel:+9960552209809">

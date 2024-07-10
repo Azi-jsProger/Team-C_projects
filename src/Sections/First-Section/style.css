@@ -17,12 +17,12 @@
 }
 
 .car-image {
-    width: 50vh;
-    height: 745px;
+    width: 25vw;
+    height: 100vh;
     background-color: #478E64;
     position: absolute;
-    top: -29vh;
-    right: -15.3vh;
+    top: -42.4%;
+    right: -8.6%;
     display: flex;
     align-items: end;
     z-index: 3;
