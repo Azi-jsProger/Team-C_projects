@@ -70,6 +70,7 @@ form {
 .book {
      width: 40%;
      height: 85%;
+     object-fit: cover;
 }
 
 .tag {
@@ -94,7 +95,6 @@ form {
 
 .loa-third {
      display: flex;
-     /*align-items: center;*/
      justify-content: center;
      width: 50%;
 }

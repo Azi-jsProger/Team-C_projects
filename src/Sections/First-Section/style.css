@@ -1,5 +1,6 @@
 .app {
     border-bottom: 1px solid #B7B7B7;
+    height: 100vh;
 }
 
 .first {
@@ -17,15 +18,25 @@
 }
 
 .car-image {
-    width: 25vw;
-    height: 100vh;
     background-color: #478E64;
-    position: absolute;
-    top: -42.4%;
-    right: -8.6%;
+    height: 107.7vh;
+    width: 25.3vw;
     display: flex;
-    align-items: end;
+    flex-direction: column;
+    justify-content: end;
+    padding: 0 0 7vh 0;
+    position: absolute;
+    right: -8.6%;
+    top: -45%;
     z-index: 3;
+}
+
+.car {
+    width: 30vw;
+    height: 33.5vh;
+    position: absolute;
+    right: 70%;
+    top: 27%;
 }
 
 .contac {
@@ -44,15 +55,6 @@
     color: #fff;
     font-size: 15px;
     font-weight: 400;
-    z-index: 4; /* Убедитесь, что ссылка находится поверх */
-}
-
-.car {
-    width: 75vh;
-    height: 40vh;
-    position: absolute;
-    right: 250px;
-    top: 200px;
 }
 
 .main h1 {

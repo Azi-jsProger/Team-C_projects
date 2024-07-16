@@ -42,6 +42,7 @@ h1::selection , p::selection , a::selection , img::selection, h3::selection, h4:
 
 .container {
   width: 1320px;
+  width: 84.45vw;
   margin: 0 auto;
 }
 
