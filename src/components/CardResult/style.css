@@ -1,0 +1,43 @@
+.card-result {
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.result-test{
+    display: flex;
+    gap: 50px;
+}
+
+.result-test h4 {
+    text-decoration: underline;
+    font-size: 2.3vh;
+    font-weight: 600;
+}
+
+.buts {
+    display: flex;
+    gap: 20px;
+}
+
+.fail-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: cover;
+}
+
+.fail-img img {
+    width: 8vw;
+    height: 15vh;
+}
+
+.fail-img h3 {
+    /*font-size: 30px;*/
+    font-size: 4vh;
+}

@@ -20,7 +20,7 @@ const ButtonMaterial = (props) => {
 
     return (
         <Button sx={buttonStyles} variant="contained" onClick={onSubmit} disabled={disabled}>
-            {img && <img src={img} alt="" />}
+            {img && <img style={{objectFit:'cover'}} src={img} alt="" />}
             {value}
         </Button>
     );
