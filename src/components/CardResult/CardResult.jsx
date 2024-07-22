@@ -10,7 +10,7 @@ const CardResult = (props) => {
 
 
     const {
-        img, text, time, style, errorStyle, error, questionCount
+        img, text, time, style, errorStyle, error, questionCount,currentQuestionIndex
     } = props
 
     const navigate = useNavigate();
@@ -38,7 +38,7 @@ const CardResult = (props) => {
         <div style={style} className="result-test">
             <h4>Билет 1</h4>
             <h4>Время {text}</h4>
-            <h4>Вопросы {questionCount - error}/{questionCount}</h4>
+            <h4>Вопросы {currentQuestionIndex}/{questionCount}</h4>
             <h4 style={errorStyle}>Ошибки {error}/2</h4>
         </div>
 
