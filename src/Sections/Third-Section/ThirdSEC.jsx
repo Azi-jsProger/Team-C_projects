@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import './ThirdSEC.css';
 import book from '../../assets/img/image.png';
 import location from '../../assets/img/location_on_24dp_FILL0_wght400_GRAD0_opsz24.png';
-import { axiosInstance } from "../../Utils/API/Api";
+import {axiosInstance} from "../../Utils/API/Api";
 import ButtonMaterial from "../../components/Button/Button";
-import { useForm } from "react-hook-form";
+import {useForm} from "react-hook-form";
 import {showError, showSucsess} from "../../Utils/alert/alert";
 import Loading from "../../components/Loading/Loading";
 import {motion} from "framer-motion";
@@ -12,19 +12,15 @@ import {motion} from "framer-motion";
 const ThirdSEC = (props) => {
 
     const {
-        isLoading,
-        setIsLoading,
-        id
-    }  = props
+        isLoading, setIsLoading, id
+    } = props
 
 
     const [clear, setClear] = useState('')
 
     const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({ mode: 'onChange' });
+        register, handleSubmit, formState: {errors},
+    } = useForm({mode: 'onChange'});
 
     const onSubmit = async (data) => {
         props.setIsLoading(true)
@@ -33,7 +29,7 @@ const ThirdSEC = (props) => {
                 message: data.phone
             });
             console.log(response.data);
-            showSucsess('Успешно','успешно')
+            showSucsess('Успешно', 'успешно')
         } catch (e) {
             if (e?.res?.status === 404) {
                 showError('Связь с сервером установлена, но данных по заданному запросу на сервере нет')
@@ -58,32 +54,30 @@ const ThirdSEC = (props) => {
     }
 
     const styleForm = {
-        width:'131px',
-        height:'50px',
+        width: '131px',
+        height: '50px',
         backgroundColor: '#11AE04',
-        borderRadius:'30px',
-        color:'#fff',
-        textTransform:'uppercase',
-        fontSize:'22px',
-        textAlign:'center',
-        '@media screen and (max-width: 391px)' :{
-            width: '50px',
-            height: '20px',
-            fontSize: '10px'
+        borderRadius: '30px',
+        color: '#fff',
+        textTransform: 'uppercase',
+        fontSize: '22px',
+        textAlign: 'center',
+        '@media screen and (max-width: 391px)': {
+            width: '50px', height: '20px', fontSize: '10px'
         }
     }
 
     return (
 
-            <section className="third" id={id}>
+        <section className="third" id={id}>
 
 
             <div className='box'>
                 <motion.img
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    src={book} className='book' alt="Book" />
+                    initial={{opacity: 0, scale: 0.5}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.5}}
+                    src={book} className='book' alt="Book"/>
                 <div className="text-in">
                     <div className="instruct">
                         <h2>Методическое пособие:</h2>
@@ -103,19 +97,16 @@ const ThirdSEC = (props) => {
                             <a href="https://maps.app.goo.gl/1NBQfEnbYmDCu71c7" target='_blank'>Сухе Ботора 26/1</a>
                         </div>
 
-                        {props.isLoading ?
-                            <div className='loa-third'>
-                                <Loading />
+                        {props.isLoading ? <div className='loa-third'>
+                                <Loading/>
                             </div>
 
-                            :
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            : <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="phone">
                                     <input
                                         {...register('phone', {
                                             maxLength: {
-                                                value: 17,
-                                                message: 'Максимум 17 символов'
+                                                value: 17, message: 'Максимум 17 символов'
                                             }
                                         })}
                                         placeholder='Пишите номер'
@@ -132,12 +123,11 @@ const ThirdSEC = (props) => {
                                     hoverStyles={hoverForm}
                                     value='купить'
                                 />
-                            </form>
-                        }
+                            </form>}
                     </div>
                 </div>
             </div>
-            </section>
+        </section>
 
     );
 };

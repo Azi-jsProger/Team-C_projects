@@ -7,7 +7,7 @@ import success from '../../assets/img/Smile.png';
 
 const PassedPage = () => {
     const location = useLocation();
-    const { questionCount, elapsedTime } = location.state || {};
+    const { questionCount, elapsedTime,currentQuestionIndex } = location.state || {};
 
     return (
         <div className='passed'>
@@ -17,6 +17,7 @@ const PassedPage = () => {
                         questionCount={questionCount}
                         error={0}
                         errorStyle={{ color: '#1C1B1F' }}
+                        text={`${Math.floor(elapsedTime / 60)} м ${elapsedTime % 60} с`}
                     />
                     <CardResult
                         style={{ color: '#478E64' }}
@@ -24,7 +25,7 @@ const PassedPage = () => {
                         errorStyle={{ color: '#BB1919' }}
                         questionCount={questionCount}
                         img={success}
-                        text={`Тест пройден! Время: ${Math.floor(elapsedTime / 60)} минут ${elapsedTime % 60} секунд`}
+                        text={`${Math.floor(elapsedTime / 60)} м ${elapsedTime % 60} с`}
                     />
                 </div>
             </div>
